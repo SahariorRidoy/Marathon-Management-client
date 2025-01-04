@@ -9,6 +9,7 @@ import Dashboard from "../components/Pages/Dashboard/Dashboard";
 import AddMarathon from "../components/Pages/Dashboard/AddMarathon";
 import MyMarathon from "../components/Pages/Dashboard/MyMarathon";
 import MyApplyList from "../components/Pages/Dashboard/MyApplyList";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -21,12 +22,12 @@ const router = createBrowserRouter([
       },
       {
         path: "/marathons",
-        element: <Marathons />,
+        element: <PrivateRoute><Marathons /></PrivateRoute>,
         
       },
       {
         path: "/dashboard",
-        element: <Dashboard />,
+        element: <PrivateRoute><Dashboard /></PrivateRoute>,
         children:[
           {
             path:"/dashboard",

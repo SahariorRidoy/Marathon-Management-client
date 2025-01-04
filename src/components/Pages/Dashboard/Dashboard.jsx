@@ -5,7 +5,7 @@ const Dashboard = () => {
   return (
     <div className="max-w-[1320px] mx-auto grid grid-cols-6">
       {/* Sidebar Navigation */}
-      <div className="col-span-1 border-2 border-red-600 flex flex-col text-white space-y-2 p-4
+      <div className="col-span-1 flex flex-col text-white space-y-2 p-4
        bg-gray-200">
         <NavLink
           to="/dashboard"
@@ -35,7 +35,7 @@ const Dashboard = () => {
       </div>
 
       {/* Main Content */}
-      <div className="col-span-5 border-2 border-red-600 p-4">
+      <div className="col-span-5 p-4">
         <Outlet />
       </div>
     </div>
