@@ -71,47 +71,44 @@ const Navbar = () => {
           </NavLink>
         </ul>
 
-
         {/* If User Exist */}
-
 
         {user?.photoURL ? (
           <div className="flex gap-6 text-lg font-semibold">
             <NavLink
-            to="/dashboard"
-            className={({ isActive }) =>
-              isActive
-                ? "px-4 py-2 rounded-md bg-blue-500 text-white"
-                : "px-4 py-2 rounded-md"
-            }
-          >
-            Dashboard
-          </NavLink>
+              to="/dashboard"
+              className={({ isActive }) =>
+                isActive
+                  ? "px-4 py-2 rounded-md bg-blue-500 text-white"
+                  : "px-4 py-2 rounded-md"
+              }
+            >
+              Dashboard
+            </NavLink>
             <div
               className="w-full h-12 rounded-full overflow-hidden cursor-pointer"
               onMouseEnter={() => setIsDropdownVisible(true)}
               onMouseLeave={() => setIsDropdownVisible(false)}
             >
-              <img
-                src={user.photoURL}
-                alt="User Photo"
-                className="w-full h-full object-cover"
-              />
+              <div className="avatar online">
+                <div className="w-12 rounded-full">
+                  <img src={user?.photoURL}  className=""/>
+                </div>
+              </div>
               {isDropdownVisible && (
                 <div className="absolute right-0 lg:right-[-100px] z-10 top-8 mt-2 bg-gray-300 shadow-lg rounded-md border text-gray-800 w-48">
                   <p className="px-4 py-2 font-medium border-b">
                     {user.displayName || "No Name"}
                   </p>
-                  
                 </div>
               )}
             </div>
             <button
-                    onClick={logOut}
-                    className="w-full text-center px-2 py-2 bg-error text-white rounded-lg hover:opacity-70 transition"
-                  >
-                    Logout
-                  </button>
+              onClick={logOut}
+              className="w-full text-center px-2 py-2 bg-error text-white rounded-lg hover:opacity-70 transition"
+            >
+              Logout
+            </button>
           </div>
         ) : (
           <>

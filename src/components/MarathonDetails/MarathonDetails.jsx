@@ -1,28 +1,28 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import axios from 'axios';
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import axios from "axios";
+import Loading from "../Loading/Loading";
 
 const MarathonDetails = () => {
-  const { id } = useParams(); // Access the dynamic parameter from the URL
+  const { id } = useParams();
   const [marathon, setMarathon] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Fetch marathon details using the `id` from params
     axios
       .get(`http://localhost:5000/marathons/${id}`)
       .then((response) => {
-        setMarathon(response.data); // Set the fetched data to the state
-        setLoading(false); // Update loading state
+        setMarathon(response.data);
+        setLoading(false); 
       })
       .catch((error) => {
-        console.error('Error fetching marathon details:', error);
+        console.error("Error fetching marathon details:", error);
         setLoading(false);
       });
   }, [id]);
 
   if (loading) {
-    return <p>Loading...</p>;
+    return <Loading></Loading>;
   }
 
   if (!marathon) {
@@ -30,14 +30,27 @@ const MarathonDetails = () => {
   }
 
   return (
-    <div className="max-w-[1320px] mx-auto">
-      <img src={marathon.image} alt={marathon.title} className="w-full object-cover" />
-      <h1 className="text-3xl font-bold mt-4">{marathon.title}</h1>
-      <p className="text-gray-600 mt-2">{marathon.description}</p>
-      <p className="mt-2">Location: {marathon.location}</p>
-      <p className="mt-2">Distance: {marathon.distance}</p>
-      <p className="mt-2">Start Date: {new Date(marathon.start_date).toLocaleDateString()}</p>
-      <p className="mt-2">End Date: {new Date(marathon.end_date).toLocaleDateString()}</p>
+    <div className="max-w-[1320px] mx-auto p-4">
+      <div className="card lg:card-side bg-base-100 shadow-xl flex flex-col lg:flex-row">
+        <figure className="lg:w-2/3">
+          <img src={marathon.image} alt="Album" className="w-full h-full object-cover" />
+        </figure>
+        <div className="card-body lg:w-1/3 p-4 ml-6">
+          <h1 className="text-3xl font-bold mt-4">{marathon.title}</h1>
+          <p className="text-gray-600 mt-2">{marathon.description}</p>
+          <p className="mt-2">Location: {marathon.location}</p>
+          <p className="mt-2">Distance: {marathon.distance}</p>
+          <p className="mt-2">
+            Start Date: {new Date(marathon.start_date).toLocaleDateString()}
+          </p>
+          <p className="mt-2">
+            End Date: {new Date(marathon.end_date).toLocaleDateString()}
+          </p>
+          <div className="card-actions mt-4">
+            <button className="btn btn-primary">Register</button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
