@@ -1,10 +1,9 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
-import toast from "react-hot-toast";
-import MarathonCard from "./MarathonCard";
+import React, { useEffect, useState } from 'react';
+import MarathonCard from '../Marathons/MarathonCard';
+import axios from 'axios';
 
-const Marathons = () => {
-  const [data, setData] = useState([]);
+const MarathonSection = () => {
+    const [data, setData] = useState([]);
 
   useEffect(() => {
     axios
@@ -28,5 +27,4 @@ const Marathons = () => {
     </div>
   );
 };
-
-export default Marathons;
+export default MarathonSection;

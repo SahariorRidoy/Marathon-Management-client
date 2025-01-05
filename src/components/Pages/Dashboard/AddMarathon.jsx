@@ -1,40 +1,43 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import toast from "react-hot-toast";
+import { AuthContext } from "../../../Provider/AuthProvider";
 const AddMarathon = () => {
+  const {user}=useContext(AuthContext)
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
   const [marathonStartDate, setMarathonStartDate] = useState(new Date());
   const createdAt = new Date();
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     const form = e.target;
 
     const title = form.title.value;
     const start_date = startDate;
-    const end_Date = endDate;
+    const end_date = endDate;
     const marathon_Start = marathonStartDate;
     const location = form.location.value;
     const distance = form.distance.value;
     const description = form.description.value;
     const image = form.image.value;
     const created_At = createdAt;
+    const email=user.email;
+    const name=user.displayName;
 
     const addMarathon = {
       image,
       title,
       description,
       start_date,
-      end_Date,
+      end_date,
       marathon_Start,
       location,
       distance,
       created_At,
-      // email,
-      // name,
+      email,
+      name,
     };
 
     // Added to server side
