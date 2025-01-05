@@ -10,6 +10,7 @@ import AddMarathon from "../components/Pages/Dashboard/AddMarathon";
 import MyMarathon from "../components/Pages/Dashboard/MyMarathon";
 import MyApplyList from "../components/Pages/Dashboard/MyApplyList";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import MarathonDetails from "../components/MarathonDetails/MarathonDetails";
 
 const router = createBrowserRouter([
   {
@@ -22,28 +23,41 @@ const router = createBrowserRouter([
       },
       {
         path: "/marathons",
-        element: <PrivateRoute><Marathons /></PrivateRoute>,
-        
+        element: (
+          <PrivateRoute>
+            <Marathons />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/marathons/:id",
+        element: (
+          <PrivateRoute>
+            <MarathonDetails />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/dashboard",
-        element: <PrivateRoute><Dashboard /></PrivateRoute>,
-        children:[
+        element: (
+          <PrivateRoute>
+            <Dashboard />
+          </PrivateRoute>
+        ),
+        children: [
           {
-            path:"/dashboard",
-            element:<AddMarathon></AddMarathon>
+            path: "/dashboard",
+            element: <AddMarathon></AddMarathon>,
           },
           {
-            path:"my-marathon",
-            element:<MyMarathon></MyMarathon>
+            path: "my-marathon",
+            element: <MyMarathon></MyMarathon>,
           },
           {
-            path:"my-apply",
-            element:<MyApplyList></MyApplyList>
+            path: "my-apply",
+            element: <MyApplyList></MyApplyList>,
           },
-
-        ]
-        
+        ],
       },
       {
         path: "/login",

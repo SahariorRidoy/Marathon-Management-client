@@ -7,7 +7,7 @@ const MarathonSection = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/marathons")
+      .get("http://localhost:5000/marathon-section")
       .then((res) => {
         setData(res.data);
       })
