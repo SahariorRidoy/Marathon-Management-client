@@ -11,6 +11,7 @@ import MyMarathon from "../components/Pages/Dashboard/MyMarathon";
 import MyApplyList from "../components/Pages/Dashboard/MyApplyList";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import MarathonDetails from "../components/MarathonDetails/MarathonDetails";
+import MarathonRegistration from "../components/Pages/MarathonRegistration/MarathonRegistration";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,14 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <MarathonDetails />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/marathons/:id/marathon-registration",
+        element: (
+          <PrivateRoute>
+            <MarathonRegistration />
           </PrivateRoute>
         ),
       },
