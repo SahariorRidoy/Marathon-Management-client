@@ -16,8 +16,6 @@ const Marathons = () => {
         console.error(err);
       });
   }, []);
- 
-  console.log(data);
   return (
     <div className="max-w-[1320px] mx-auto">
       <div className="grid grid-cols-3 gap-16">

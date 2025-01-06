@@ -5,10 +5,12 @@ import axios from 'axios';
 import toast from 'react-hot-toast';
 
 const MarathonRegistration = () => {
-  const location = useLocation();
-  const { marathon } = location.state || {};
+  const Location = useLocation();
+  const { marathon } = Location.state || {};
   const { user } = useContext(AuthContext);
   const { email } = user;
+  const {image, title,distance,location}=marathon
+  console.log(marathon)
 
   // Register Marathon
   const handleSubmit =async (e) => {
@@ -20,6 +22,9 @@ const MarathonRegistration = () => {
     const last_name=form.l_name.value;
     const phone=form.phone.value;
     const marathon_start=form.marathon_start.value;
+    const m_image=image;
+    const m_distance=distance;
+    const m_location=location;
 
     const registrationData={
         email:email,
@@ -28,6 +33,9 @@ const MarathonRegistration = () => {
         last_name:last_name,
         phone:phone,
         marathon_start:marathon_start,
+        image:m_image,
+        distance:m_distance,
+        location:m_location,
     }
      // Add Data into server side
      try {
@@ -43,7 +51,7 @@ const MarathonRegistration = () => {
   return (
     <div className="max-w-6xl mx-auto p-6 bg-gray-300 shadow-md rounded-lg">
       <div className="w-full max-w-2xl mx-auto">
-        <h2 className="text-4xl font-bold my-6 text-center">Register Marathon</h2>
+        <h2 className="text-4xl font-bold my-6 text-center">Registration to Marathon</h2>
         <form onSubmit={handleSubmit} className="space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="form-control">
