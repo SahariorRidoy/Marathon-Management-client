@@ -10,6 +10,7 @@ const AddMarathon = () => {
   const [endDate, setEndDate] = useState(new Date());
   const [marathonStartDate, setMarathonStartDate] = useState(new Date());
   const createdAt = new Date();
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     const form = e.target;
@@ -25,7 +26,6 @@ const AddMarathon = () => {
     const created_At = createdAt;
     const email=user.email;
     const name=user.displayName;
-
     const addMarathon = {
       image,
       title,

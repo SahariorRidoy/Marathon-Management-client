@@ -51,6 +51,13 @@ const MarathonDetails = () => {
           <p className="mt-2">
             End Date: {new Date(marathon.end_date).toLocaleDateString()}
           </p>
+          
+            
+              <div className="stat-title">Total Registration: 0</div>
+              
+              
+           
+          
           <div className="card-actions mt-4">
             <Link
               to={{

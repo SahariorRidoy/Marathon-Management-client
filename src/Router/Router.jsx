@@ -66,6 +66,7 @@ const router = createBrowserRouter([
             path: "my-apply",
             element: <MyApplyList></MyApplyList>,
           },
+          
         ],
       },
       {

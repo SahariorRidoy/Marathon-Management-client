@@ -8,7 +8,6 @@ const MyMarathon = () => {
     const {user} = useContext(AuthContext)
     const [marathons, setMarathons] = useState([]);
     const [loading, setLoading] = useState(true);
-    console.log(user.email);
     
     useEffect(() => {
         axios
