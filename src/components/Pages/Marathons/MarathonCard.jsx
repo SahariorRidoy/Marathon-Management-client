@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 
 const MarathonCard = ({marathon}) => {
-    const {image,title,location, start_date,end_Date,_id } = marathon;
+    const {image,title,location, start_date,end_date,_id } = marathon;
     return (
         <div className="card bg-base-100 w-96 shadow-xl">
   <figure>
@@ -18,7 +18,7 @@ const MarathonCard = ({marathon}) => {
     <p>Location: {location}</p>
     
       <div className="badge badge-outline">Registration Start: {start_date}</div>
-      <div className="badge badge-outline">Registration End: {end_Date}</div>
+      <div className="badge badge-outline">Registration End: {end_date}</div>
     
     <Link to={`/marathons/${_id}`}><button className='btn btn-success text-white w-full'>See Details</button></Link>
   </div>
