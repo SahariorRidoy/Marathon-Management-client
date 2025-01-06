@@ -69,6 +69,34 @@ const MyMarathonList = ({ marathon, idx, setMarathons }) => {
       Swal.fire("Error", "Failed to update marathon", "error");
     }
   };
+  const handleDelete = async () => {
+    try {
+      // Show confirmation prompt using SweetAlert2
+      const result = await Swal.fire({
+        title: "Are you sure?",
+        text: "You won't be able to revert this!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes, delete it!",
+      });
+  
+      if (result.isConfirmed) {
+        const response = await axios.delete(`http://localhost:5000/marathons/${_id}`);
+        
+        if (response.data.success) {
+          setMarathons((prev) => prev.filter((m) => m._id !== _id)); 
+          Swal.fire("Deleted!", "Marathon has been deleted.", "success");
+        } else {
+          Swal.fire("Error", "Failed to delete marathon", "error");
+        }
+      }
+    } catch (error) {
+      console.error("Error while deleting marathon:", error);
+      Swal.fire("Error", "Failed to delete marathon", "error");
+    }
+  };
   
   
 
@@ -236,7 +264,7 @@ const MyMarathonList = ({ marathon, idx, setMarathons }) => {
                 </dialog>
               )}
               
-              <button className="btn btn-error text-white">Delete</button>
+              <button onClick={handleDelete} className="btn btn-error text-white">Delete</button>
             </div>
           </div>
         </td>
