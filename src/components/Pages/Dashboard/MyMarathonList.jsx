@@ -122,7 +122,7 @@ const MyMarathonList = ({ marathon, idx, setMarathons }) => {
 
               {/* Update Marathon Modal */}
               {openModal && (
-                <dialog id="my_modal_1" className="modal" open>
+                <dialog id="my_modal_1" className="modal bg-gray-300" open>
                   <div className="modal-box">
                     <h3 className="font-bold text-lg">Update Marathon</h3>
                     <form onSubmit={handleSubmit} className="space-y-6">
@@ -177,6 +177,7 @@ const MyMarathonList = ({ marathon, idx, setMarathons }) => {
                             className="w-full input input-bordered"
                             selected={marathonStartDate}
                             onChange={(date) => setMarathonStartDate(date)}
+                            
                           />
                         </div>
                       </div>

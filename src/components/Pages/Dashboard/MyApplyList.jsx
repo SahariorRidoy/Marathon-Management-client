@@ -42,9 +42,6 @@ const MyApplyList = () => {
               <th className="text-base text-info hidden sm:table-cell">
                 Phone No.
               </th>
-              <th className="text-base text-info hidden sm:table-cell">
-                Distance
-              </th>
             </tr>
           </thead>
           <tbody>
