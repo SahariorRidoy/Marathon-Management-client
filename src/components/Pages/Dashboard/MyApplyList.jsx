@@ -33,7 +33,7 @@ const MyApplyList = () => {
       <Helmet>
         <title>Dashboard | My Apply List</title>
       </Helmet>
-
+      <h2 className="text-3xl font-bold text-center mb-6">My Apply List</h2>
       {/* Search Input */}
       <div className="flex items-center justify-center ">
         <h2 className="bg-success py-3 px-6 rounded-l-xl font-semibold text-white">

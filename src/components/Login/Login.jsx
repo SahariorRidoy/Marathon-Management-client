@@ -5,7 +5,9 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import toast from "react-hot-toast";
 import { Typewriter } from "react-simple-typewriter";
 import { Helmet } from "react-helmet";
-
+import googleImg from "../../assets/google.png";
+import animationData from "../../assets/Animation2.json";
+import Lottie from "react-lottie-player";
 const Login = () => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -60,81 +62,105 @@ const Login = () => {
     setShowPassword(!showPassword);
   };
   return (
-    <div className="max-w-sm lg:max-w-xl lg:mx-auto  border-2 bg-base-300 shadow-lg rounded-lg py-10 mx-4 lg:px-0 ">
-     <Helmet>
+    <div className="max-w-[1320px] mx-auto border bg-white shadow-md rounded-md px-6 lg:px-12">
+      <Helmet>
         <title>Dashboard | Login</title>
       </Helmet>
-      <div className="text-center">
-        <h1 className="text-[#11175D] w-full overflow-hidden text-4xl font-bold mb-7">
-          <Typewriter
-            words={["Login to your account!"]}
-            cursorStyle="|"
-            typeSpeed={70}
-            delaySpeed={1000}
-          />
-        </h1>
-      </div>
-      <div className="text-center flex justify-center">
-        <form onSubmit={handleLogIn}>
-          <div className="relative">
-            <label className="text-[#03014C] w-full opacity-70 absolute right-20">
-              Email Address
-            </label>{" "}
-            <br />
-            <input
-              className="w-80 border-2 focus:outline-none border-[#11175D] border-opacity-30 px-8 rounded-md py-3 mb-6"
-              type="text"
-              name="email"
-              placeholder="example@mail.com"
-            />
-          </div>
-          <br />
-          <div className="relative">
-            <label className="text-[#03014C] w-full opacity-70 absolute right-24">
-              Password
-            </label>
-            <br />
-            <input
-              className="w-80 border-2 focus:outline-none border-[#11175D] border-opacity-30 px-8 rounded-md  py-3"
-              type={showPassword ? "text" : "password"}
-              name="password"
-              placeholder="Enter your password"
-            />
-            {showPassword ? (
-              <FaEye
-                onClick={handleShowPassword}
-                className="absolute text-xl left-[280px] top-10 cursor-pointer"
-              />
-            ) : (
-              <FaEyeSlash
-                onClick={handleShowPassword}
-                className="absolute text-xl left-[280px] top-10 cursor-pointer"
-              />
-            )}
-          </div>
-          <br />
-          <button
-            className=" mt-4 btn bg-[#24a062] text-xl rounded-full text-white px-[100px] mb-4 hover:opacity-70"
-            type="submit"
-          >
-            Login
-          </button>
-          <p>or</p>
-          <div className="hover:opacity-50 cursor-pointer w-60 flex gap-3 mx-auto border-[#11175D] rounded-full items-center py-2 border-2 pl-7 pr-10 border-opacity-30 my-4">
-            {/* <img src={googleImg} alt="" /> */}
 
-            <button onClick={submitGoogleLogin}>Login with Google</button>
+      <div className="hero bg-base-200 ">
+        <div className="hero-content flex-col lg:flex-row p-0">
+          <Lottie
+            loop
+            animationData={animationData}
+            play
+            style={{ width: 500, height: 600 }}
+          />
+          <div className="lg:w-[308px]">
+            <div className="text-center mb-8">
+              <h1 className="text-[#1D3557] text-3xl font-semibold">
+                <Typewriter
+                  words={["Login to your account!"]}
+                  cursorStyle="|"
+                  typeSpeed={70}
+                  delaySpeed={1000}
+                />
+              </h1>
+            </div>
+            <form onSubmit={handleLogIn} className="space-y-6">
+              {/* Email Input */}
+              <div>
+                <label className="block text-[#457B9D] text-sm font-medium mb-1">
+                  Email Address
+                </label>
+                <input
+                  className="w-full border border-gray-300 focus:ring-2 focus:ring-[#24a062] rounded-md px-4 py-2 text-gray-700 placeholder-gray-400 focus:outline-none"
+                  type="text"
+                  name="email"
+                  placeholder="example@mail.com"
+                />
+              </div>
+
+              {/* Password Input */}
+              <div className="relative">
+                <label className="block text-[#457B9D] text-sm font-medium mb-1">
+                  Password
+                </label>
+                <input
+                  className="w-full border border-gray-300 focus:ring-2 focus:ring-[#24a062] rounded-md px-4 py-2 text-gray-700 placeholder-gray-400 focus:outline-none"
+                  type={showPassword ? "text" : "password"}
+                  name="password"
+                  placeholder="Enter your password"
+                />
+                {showPassword ? (
+                  <FaEye
+                    onClick={handleShowPassword}
+                    className="absolute text-gray-500 right-4 top-[36px] cursor-pointer"
+                  />
+                ) : (
+                  <FaEyeSlash
+                    onClick={handleShowPassword}
+                    className="absolute text-gray-500 right-4 top-[36px] cursor-pointer"
+                  />
+                )}
+              </div>
+
+              {/* Login Button */}
+              <button
+                className="w-full bg-[#24a062] hover:bg-[#1f8c56] transition text-white font-semibold py-2 rounded-md"
+                type="submit"
+              >
+                Login
+              </button>
+
+              {/* Divider */}
+              <div className="flex items-center my-4">
+                <div className="flex-grow h-px bg-gray-300"></div>
+                <span className="px-2 text-sm text-gray-500">or</span>
+                <div className="flex-grow h-px bg-gray-300"></div>
+              </div>
+
+              {/* Google Login */}
+              <div
+                onClick={submitGoogleLogin}
+                className="w-full flex items-center justify-center gap-3 border border-gray-300 hover:shadow-lg transition rounded-md py-2 cursor-pointer"
+              >
+                <img src={googleImg} alt="Google Icon" className="w-6 h-6" />
+                <span className="text-gray-700">Login with Google</span>
+              </div>
+
+              {/* Register Link */}
+              <p className="text-sm text-gray-600 text-center">
+                Don't have an account?{" "}
+                <Link
+                  to="/register"
+                  className="text-[#EA6C00] font-medium hover:underline"
+                >
+                  Register
+                </Link>
+              </p>
+            </form>
           </div>
-          <p className="text-sm text-[#03014C] mb-10">
-            Don't have an account?
-            <span className="text-[#EA6C00] font-bold">
-              <Link to="/register" className="underline">
-                {" "}
-                Register
-              </Link>
-            </span>
-          </p>
-        </form>
+        </div>
       </div>
     </div>
   );

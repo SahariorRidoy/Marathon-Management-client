@@ -4,10 +4,8 @@ import { AuthContext } from "../../Provider/AuthProvider";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
-  const [isDropdownVisible, setIsDropdownVisible] = useState(false);
 
   useEffect(() => {
-    setIsDropdownVisible(false);
   }, [user]);
   return (
     <div className="navbar flex justify-between max-w-[1320px] mx-auto sticky top-0 z-50 bg-base-100">
@@ -87,21 +85,14 @@ const Navbar = () => {
             </NavLink>
             <div
               className="w-full h-12 rounded-full overflow-hidden cursor-pointer"
-              onMouseEnter={() => setIsDropdownVisible(true)}
-              onMouseLeave={() => setIsDropdownVisible(false)}
+              
             >
               <div className="avatar online">
                 <div className="w-12 rounded-full">
                   <img src={user?.photoURL}  className=""/>
                 </div>
               </div>
-              {isDropdownVisible && (
-                <div className="absolute right-0 lg:right-[-100px] z-10 top-8 mt-2 bg-gray-300 shadow-lg rounded-md border text-gray-800 w-48">
-                  <p className="px-4 py-2 font-medium border-b">
-                    {user.displayName || "No Name"}
-                  </p>
-                </div>
-              )}
+             
             </div>
             <button
               onClick={logOut}

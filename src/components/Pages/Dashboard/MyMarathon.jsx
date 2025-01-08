@@ -30,6 +30,7 @@ const MyMarathon = () => {
       <Helmet>
         <title>Dashboard | My Marathon List</title>
       </Helmet>
+      <h2 className="text-3xl font-bold text-center mb-6">My Marathon List</h2>
       <div className="overflow-x-auto">
         <table className="table">
           <thead>
