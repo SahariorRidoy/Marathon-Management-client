@@ -1,8 +1,7 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 import Loading from "../Loading/Loading";
-import { AuthContext } from "../../Provider/AuthProvider";
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
 import { Helmet } from "react-helmet";
 
@@ -32,9 +31,24 @@ const MarathonDetails = () => {
     return <p>No marathon details found.</p>;
   }
 
-  // React Countdown 
+  // Convert marathon dates to Date objects
+  const registrationStartDate = new Date(marathon.start_date);
+  const registrationEndDate = new Date(marathon.end_date);
   const marathonStartTime = new Date(marathon.marathon_Start).getTime();
   const currentTime = Date.now();
+
+  // Debugging the dates and current time
+  console.log('Current time:', currentTime);
+  console.log('Registration start time:', registrationStartDate.getTime());
+  console.log('Registration end time:', registrationEndDate.getTime());
+
+  // Check if registration is open (between start and end dates)
+  const isRegistrationOpen =
+    currentTime >= registrationStartDate.getTime() && currentTime <= registrationEndDate.getTime();
+
+  console.log('Is registration open?', isRegistrationOpen);
+
+  // React Countdown
   const remainingTime = Math.max((marathonStartTime - currentTime) / 1000, 0); // Convert to seconds
 
   const renderTime = ({ remainingTime }) => {
@@ -89,16 +103,23 @@ const MarathonDetails = () => {
           </div>
 
           <div className="card-actions mt-6 flex justify-center">
-            <Link
-              to={{
-                pathname: `marathon-registration`,
-              }}
-              state={{ marathon }}
+            <button
+              className={`btn px-8 py-3 font-semibold rounded-full transition-all ${isRegistrationOpen ? "btn-primary text-white bg-primary hover:bg-primary-dark" : "btn-disabled bg-gray-400 text-gray-600 cursor-not-allowed"}`}
+              disabled={!isRegistrationOpen}
             >
-              <button className="btn btn-primary px-8 py-3 text-white font-semibold rounded-full bg-primary hover:bg-primary-dark transition-all">
-                Register Now
-              </button>
-            </Link>
+              {isRegistrationOpen ? (
+                <Link
+                  to={{
+                    pathname: `marathon-registration`,
+                  }}
+                  state={{ marathon }}
+                >
+                  Register Now
+                </Link>
+              ) : (
+                "Registration Closed"
+              )}
+            </button>
           </div>
         </div>
       </div>
