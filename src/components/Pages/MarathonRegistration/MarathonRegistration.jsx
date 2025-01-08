@@ -43,7 +43,7 @@ const MarathonRegistration = () => {
     }
      // Add Data into server side
      try {
-        await axios.post(`http://localhost:5000/my-apply`, registrationData);
+        await axios.post(`https://assignment-11-server-gray-six.vercel.app/my-apply`, registrationData);
   
          Swal.fire("Success", "Registration successfully!", "success");
         form.reset();

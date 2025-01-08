@@ -29,7 +29,7 @@ const MyApplyListData = ({ idx, apply, setMyApply }) => {
 
     try {
       const response = await axios.put(
-        `http://localhost:5000/my-apply/${_id}`,
+        `https://assignment-11-server-gray-six.vercel.app/my-apply/${_id}`,
         updatedData
       );
 
@@ -62,7 +62,7 @@ const MyApplyListData = ({ idx, apply, setMyApply }) => {
 
       if (result.isConfirmed) {
         const response = await axios.delete(
-          `http://localhost:5000/my-apply/${_id}`
+          `https://assignment-11-server-gray-six.vercel.app/my-apply/${_id}`
         );
 
         if (response.data.success) {

@@ -9,7 +9,7 @@ const Marathons = () => {
 
   const fetchMarathons = () => {
     axios
-      .get(`http://localhost:5000/marathons?sortOrder=${sortOrder}`)
+      .get(`https://assignment-11-server-gray-six.vercel.app/marathons?sortOrder=${sortOrder}`)
       .then((res) => {
         setData(res.data);
       })

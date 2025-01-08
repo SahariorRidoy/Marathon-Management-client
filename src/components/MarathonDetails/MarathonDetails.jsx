@@ -12,7 +12,7 @@ const MarathonDetails = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/marathons/${id}`)
+      .get(`https://assignment-11-server-gray-six.vercel.app/marathons/${id}`)
       .then((response) => {
         setMarathon(response.data);
         setLoading(false);

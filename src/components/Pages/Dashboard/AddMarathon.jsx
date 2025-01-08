@@ -42,7 +42,7 @@ const AddMarathon = () => {
 
     // Added to server side
     try {
-      await axios.post(`http://localhost:5000/add-marathon`, addMarathon);
+      await axios.post(`https://assignment-11-server-gray-six.vercel.app/add-marathon`, addMarathon);
 
       toast.success("marathon added successfully");
       form.reset();

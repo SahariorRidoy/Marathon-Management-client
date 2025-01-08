@@ -13,7 +13,7 @@ const MyApplyList = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/my-apply?email=${user.email}&title=${search}`) // Pass search query to the backend
+      .get(`https://assignment-11-server-gray-six.vercel.app/my-apply?email=${user.email}&title=${search}`) // Pass search query to the backend
       .then((response) => {
         setMyApply(response.data);
         setLoading(false);

@@ -53,7 +53,7 @@ const MyMarathonList = ({ marathon, idx, setMarathons }) => {
     };
   
     try {
-      const response = await axios.put(`http://localhost:5000/marathons/${_id}`, updatedMarathon);
+      const response = await axios.put(`https://assignment-11-server-gray-six.vercel.app/marathons/${_id}`, updatedMarathon);
   
       if (response.data) {
         setOpenModal(false); 
@@ -83,7 +83,7 @@ const MyMarathonList = ({ marathon, idx, setMarathons }) => {
       });
   
       if (result.isConfirmed) {
-        const response = await axios.delete(`http://localhost:5000/marathons/${_id}`);
+        const response = await axios.delete(`https://assignment-11-server-gray-six.vercel.app/marathons/${_id}`);
         
         if (response.data.success) {
           setMarathons((prev) => prev.filter((m) => m._id !== _id)); 

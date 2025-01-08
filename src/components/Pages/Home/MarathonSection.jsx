@@ -7,7 +7,7 @@ const MarathonSection = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/marathon-section")
+      .get("https://assignment-11-server-gray-six.vercel.app/marathon-section")
       .then((res) => {
         setData(res.data);
       })
