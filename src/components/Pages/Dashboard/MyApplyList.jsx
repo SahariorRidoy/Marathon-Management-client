@@ -27,6 +27,8 @@ const MyApplyList = () => {
   }
   return (
     <div className="max-w-[1320px] mx-auto">
+
+      <h2 className="text-center mx-auto">Search</h2>
       <div className="overflow-x-auto">
         <table className="table">
           <thead>
