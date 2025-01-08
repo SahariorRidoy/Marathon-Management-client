@@ -83,13 +83,13 @@ const MyApplyListData = ({ idx, apply, setMyApply }) => {
       <tr>
         <td>{idx + 1}</td>
         <td>{title}</td>
-        <td className="hidden sm:table-cell">
+        <td className="hidden sm:table-cell md:table-cell">
           {marathon_start && format(new Date(marathon_start), "MM/dd/yyyy")}
         </td>
-        <td className="hidden sm:table-cell">
+        <td className="hidden sm:table-cell md:table-cell">
           {formData.first_name} {formData.last_name}
         </td>
-        <td className="hidden sm:table-cell">{formData.phone}</td>
+        <td className="hidden sm:table-cell md:table-cell">{formData.phone}</td>
         <td>
           <button
             onClick={() => setOpenModal(true)}

@@ -73,7 +73,7 @@ const Login = () => {
             loop
             animationData={animationData}
             play
-            style={{ width: 500, height: 600 }}
+           className="w-full max-w-sm md:max-w-md lg:max-w-lg"
           />
           <div className="lg:w-[308px]">
             <div className="text-center mb-8">

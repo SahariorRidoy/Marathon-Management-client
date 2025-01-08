@@ -72,7 +72,7 @@ const Register = () => {
             loop
             animationData={animationData}
             play
-            style={{ width: 500, height: 600 }}
+            className="w-full max-w-sm md:max-w-md lg:max-w-lg"
           />
           <div>
             <div className="text-center">

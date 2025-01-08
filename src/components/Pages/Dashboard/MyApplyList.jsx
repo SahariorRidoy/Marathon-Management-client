@@ -54,13 +54,13 @@ const MyApplyList = () => {
             <tr>
               <th className="text-base text-info">Serial</th>
               <th className="text-base text-info ">Title</th>
-              <th className="text-base text-info hidden sm:table-cell">
+              <th className="text-base text-info hidden md:table-cell sm:table-cell">
                 Marathon Start
               </th>
-              <th className="text-base text-info hidden sm:table-cell">
+              <th className="text-base text-info hidden md:table-cell sm:table-cell">
                 Full Name
               </th>
-              <th className="text-base text-info hidden sm:table-cell">
+              <th className="text-base text-info hidden md:table-cell sm:table-cell">
                 Phone No.
               </th>
             </tr>
