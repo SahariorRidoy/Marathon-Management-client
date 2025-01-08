@@ -5,6 +5,7 @@ import axios from 'axios';
 import toast from 'react-hot-toast';
 import { format } from 'date-fns';
 import Swal from 'sweetalert2';
+import { Helmet } from 'react-helmet';
 
 const MarathonRegistration = () => {
   const navigate=useNavigate()
@@ -54,6 +55,9 @@ const MarathonRegistration = () => {
 
   return (
     <div className="max-w-6xl mx-auto p-6 bg-gray-300 shadow-md rounded-lg">
+      <Helmet>
+        <title>Marathon | Marathon Registration</title>
+      </Helmet>
       <div className="w-full max-w-2xl mx-auto">
         <h2 className="text-4xl font-bold my-6 text-center">Registration to Marathon</h2>
         <form onSubmit={handleSubmit} className="space-y-6">

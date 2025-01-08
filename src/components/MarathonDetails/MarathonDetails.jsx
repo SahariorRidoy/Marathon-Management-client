@@ -4,6 +4,7 @@ import axios from "axios";
 import Loading from "../Loading/Loading";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
+import { Helmet } from "react-helmet";
 
 const MarathonDetails = () => {
   const { id } = useParams();
@@ -53,6 +54,9 @@ const MarathonDetails = () => {
 
   return (
     <div className="max-w-[1320px] mx-auto p-6">
+      <Helmet>
+        <title>Marathon | Marathon Details</title>
+      </Helmet>
       <div className="card lg:card-side bg-white shadow-xl rounded-lg overflow-hidden flex flex-col lg:flex-row">
         <figure className="lg:w-2/3">
           <img

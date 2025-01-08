@@ -3,6 +3,7 @@ import { AuthContext } from "../../../Provider/AuthProvider";
 import axios from "axios";
 import Loading from "../../Loading/Loading";
 import MyApplyListData from "./MyApplyListData";
+import { Helmet } from "react-helmet";
 
 const MyApplyList = () => {
   const { user } = useContext(AuthContext);
@@ -27,7 +28,9 @@ const MyApplyList = () => {
   }
   return (
     <div className="max-w-[1320px] mx-auto">
-
+      <Helmet>
+        <title>Dashboard | My Apply List</title>
+      </Helmet>
       <h2 className="text-center mx-auto">Search</h2>
       <div className="overflow-x-auto">
         <table className="table">

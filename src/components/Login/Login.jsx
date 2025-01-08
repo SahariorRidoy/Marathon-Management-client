@@ -4,6 +4,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { AuthContext } from "../../Provider/AuthProvider";
 import toast from "react-hot-toast";
 import { Typewriter } from "react-simple-typewriter";
+import { Helmet } from "react-helmet";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -60,6 +61,9 @@ const Login = () => {
   };
   return (
     <div className="max-w-sm lg:max-w-xl lg:mx-auto  border-2 bg-base-300 shadow-lg rounded-lg py-10 mx-4 lg:px-0 ">
+     <Helmet>
+        <title>Dashboard | Login</title>
+      </Helmet>
       <div className="text-center">
         <h1 className="text-[#11175D] w-full overflow-hidden text-4xl font-bold mb-7">
           <Typewriter

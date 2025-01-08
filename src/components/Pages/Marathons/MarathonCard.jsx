@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router";
 
 const MarathonCard = ({ marathon }) => {
-  const { image, title, location, start_date, end_date, _id } = marathon;
+  const { image, title, location, start_date, end_date, _id,createdAt } = marathon;
   return (
     <div className="card bg-base-100 w-96 shadow-xl">
       <figure>
