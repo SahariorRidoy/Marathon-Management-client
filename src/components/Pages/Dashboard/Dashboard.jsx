@@ -4,34 +4,44 @@ import { NavLink, Outlet } from "react-router-dom";
 
 const Dashboard = () => {
   return (
-    <div className="max-w-[1320px] mx-auto grid grid-cols-6 ">
+    <div className="max-w-[1320px] mx-auto grid grid-cols-6 gap-6 p-6">
       <Helmet>
         <title>Dashboard | Add Marathon</title>
       </Helmet>
+
       {/* Sidebar Navigation */}
-      <div className="col-span-1 flex flex-col text-white space-y-2 py-4 border-2 shadow-lg border-r-slate-400 min-h-[800px] bg-slate-200
-       ">
+      <div className="col-span-1 px-2 py-8 flex flex-col text-white space-y-2 border-2 border-gray-300 bg-blue-500 min-h-[800px] rounded-xl shadow-lg">
+        <h2 className="text-3xl font-semibold text-center text-white">Dashboard</h2>
+
         <NavLink
           to="/dashboard"
           end
           className={({ isActive }) =>
-            isActive ? "text-red-600 font-bold  py-2 rounded bg-white text-xl " : "text-gray-600 border-b border-slate-500 text-xl"
+            isActive
+              ? "text-blue-600 font-semibold py-3 px-4 rounded-lg bg-white shadow-md text-sm transition-all duration-300 ease-in-out"
+              : "text-white py-3 px-4 rounded-lg text-sm hover:bg-blue-500 hover:text-white transition-all duration-300 ease-in-out"
           }
         >
           Add Marathon
         </NavLink>
+
         <NavLink
           to="my-marathon"
           className={({ isActive }) =>
-            isActive ? "text-red-600 font-bold  py-2 rounded bg-white  text-xl" : "text-gray-600 border-b border-slate-500 text-xl"
+            isActive
+              ? "text-blue-600 font-semibold py-3 px-4 rounded-lg bg-white shadow-md text-sm transition-all duration-300 ease-in-out"
+              : "text-white py-3 px-4 rounded-lg text-sm hover:bg-blue-500 hover:text-white transition-all duration-300 ease-in-out"
           }
         >
           My Marathon List
         </NavLink>
+
         <NavLink
           to="my-apply"
           className={({ isActive }) =>
-            isActive ? "text-red-600 font-bold  py-2  bg-white rounded text-xl" : "text-gray-600 border-b border-slate-500 text-xl"
+            isActive
+              ? "text-blue-600 font-semibold py-3 px-4 rounded-lg bg-white shadow-md text-sm transition-all duration-300 ease-in-out"
+              : "text-white py-3 px-4 rounded-lg text-sm hover:bg-blue-500 hover:text-white transition-all duration-300 ease-in-out"
           }
         >
           My Apply List
@@ -39,7 +49,7 @@ const Dashboard = () => {
       </div>
 
       {/* Main Content */}
-      <div className="col-span-5 p-4">
+      <div className="col-span-5  bg-gray-50 shadow-xl rounded-xl">
         <Outlet />
       </div>
     </div>

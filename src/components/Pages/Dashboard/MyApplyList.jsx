@@ -33,11 +33,12 @@ const MyApplyList = () => {
       <Helmet>
         <title>Dashboard | My Apply List</title>
       </Helmet>
-     
-      
+
       {/* Search Input */}
       <div className="flex items-center justify-center ">
-      <h2 className="bg-success py-3 px-6 rounded-l-xl font-semibold text-white">Search</h2>
+        <h2 className="bg-success py-3 px-6 rounded-l-xl font-semibold text-white">
+          Search
+        </h2>
         <input
           type="text"
           placeholder="Search by Title"
