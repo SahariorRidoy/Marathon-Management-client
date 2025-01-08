@@ -1,3 +1,4 @@
+import { format } from "date-fns";
 import React from "react";
 import { Link } from "react-router";
 
@@ -13,12 +14,12 @@ const MarathonCard = ({ marathon }) => {
           {title}
           <div className="badge badge-primary">Open</div>
         </h2>
-        <p>Location: {location}</p>
+        <p className="text-lg">Location: <span className="text-primary ml-1 text-lg"> {location}</span></p>
 
-        <div className="badge badge-outline">
-          Registration Start: {start_date}
+        <div className="badge badge-outline text-lg">
+          Registration Start: <span className="text-error ml-1 text-lg"> {start_date && format(new Date(start_date), "MMMM dd, yyyy")}</span>
         </div>
-        <div className="badge badge-outline">Registration End: {end_date}</div>
+        <div className="badge badge-outline text-lg">Registration End: <span className="text-error ml-1 text-lg"> {end_date && format(new Date(end_date), "MMMM dd, yyyy")}</span></div>
 
         <Link to={`/marathons/${_id}`}>
           <button className="btn btn-success text-white w-full">

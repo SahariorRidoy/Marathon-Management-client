@@ -1,10 +1,13 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../../Provider/AuthProvider';
-import { useLocation } from 'react-router';
+import { useLocation, useNavigate } from 'react-router';
 import axios from 'axios';
 import toast from 'react-hot-toast';
+import { format } from 'date-fns';
+import Swal from 'sweetalert2';
 
 const MarathonRegistration = () => {
+  const navigate=useNavigate()
   const Location = useLocation();
   const { marathon } = Location.state || {};
   const { user } = useContext(AuthContext);
@@ -41,8 +44,9 @@ const MarathonRegistration = () => {
      try {
         await axios.post(`http://localhost:5000/my-apply`, registrationData);
   
-        toast.success("marathon added successfully");
+         Swal.fire("Success", "Registration successfully!", "success");
         form.reset();
+        navigate("/dashboard/my-apply")
       } catch (error) {
         toast.error(error.message);
       }
@@ -90,6 +94,7 @@ const MarathonRegistration = () => {
               name="f_name"
               placeholder="First Name"
               className="input input-bordered w-full"
+              required
             />
           </div>
           <div className="form-control">
@@ -101,6 +106,7 @@ const MarathonRegistration = () => {
               name="l_name"
               placeholder="Last Name"
               className="input input-bordered w-full"
+              required
             />
           </div>
         </div>
@@ -115,6 +121,7 @@ const MarathonRegistration = () => {
               name="phone"
               placeholder="Enter Phone No."
               className="input input-bordered w-full"
+              required
             />
           </div>
           <div className="form-control">
@@ -124,7 +131,8 @@ const MarathonRegistration = () => {
             <input
               type="text"
               name="marathon_start"
-              value={marathon?.marathon_Start || ''}
+              value={marathon?.marathon_Start ? format(new Date(marathon.marathon_Start), 'MMMM dd, yyyy') : ''}
+
               className="input input-bordered w-full"
               disabled
             />
