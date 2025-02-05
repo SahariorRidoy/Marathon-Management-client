@@ -1,10 +1,10 @@
-🏃‍♂️ Marathon Management System
+# 🏃‍♂️ Marathon Management System
 🌐 Live Site: [Visit Live Site](https://marathon-management-91e2f.web.app/)
 
 📌 Overview
 The Marathon Management System is a web-based platform that enables users to register for marathon campaigns, manage data, and interact with an intuitive and dynamic interface. With robust authentication, real-time updates, and a sleek design, this system simplifies marathon event management.
 
-📸 Screenshot
+##📸 Screenshot
 <div align="center">
   <img height="400" src="https://github.com/SahariorRidoy/Marathon-Management-client/blob/main/marathon1.png"  />
 </div>
@@ -15,26 +15,26 @@ The Marathon Management System is a web-based platform that enables users to reg
   <img height="400" src="https://github.com/SahariorRidoy/Marathon-Management-client/blob/main/marathon3.png"  />
 </div>
 
+---
+## 🚀 Features
+✅ **User Authentication – Secure login and registration
+✅ **CRUD Operations – Add, update, and delete marathon data
+✅ **Marathon Registration – Seamless event sign-up process
+✅ **Search & Sorting – Find events quickly with filters
+✅ **Dynamic Animations – Engaging UI with Animation
+✅ **Responsive Design – Works on all devices
+✅ **Real-Time Notifications – Toast alerts for user actions
+---
 
-🚀 Features
-✅ User Authentication – Secure login and registration
-✅ CRUD Operations – Add, update, and delete marathon data
-✅ Marathon Registration – Seamless event sign-up process
-✅ Search & Sorting – Find events quickly with filters
-✅ Dynamic Animations – Engaging UI with Animation
-✅ Responsive Design – Works on all devices
-✅ Real-Time Notifications – Toast alerts for user actions
-
-🛠️ Tech Stack
-Frontend: React, Vite, TailwindCSS, DaisyUI
-Authentication: Firebase
-Libraries & Tools:
-
-State Management: React Router
-UI Components: React Icons, Swiper, React-Datepicker
-Animations: React Awesome Reveal, React Lottie Player
-Notifications: React Hot Toast, SweetAlert2
-📦 Dependencies
+## 🛠️ Technology Used
+- **Frontend: React, Vite, TailwindCSS, DaisyUI
+- **Authentication: Firebase
+- **State Management: React Router
+- **UI Components: React Icons, Swiper, React-Datepicker
+- **Animations: React Awesome Reveal, React Lottie Player
+- **Notifications: React Hot Toast, SweetAlert2
+---
+## 📦 Dependencies
 ```sh
 "dependencies": {
   "axios": "^1.7.9",
@@ -56,7 +56,7 @@ Notifications: React Hot Toast, SweetAlert2
   "swiper": "^11.1.15"
 }
 ```
-🛠️ Development Setup
+## 🛠️ Development Setup
 Follow these steps to run the project locally:
 
 1️⃣ Clone the Repository
