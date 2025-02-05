@@ -1,5 +1,5 @@
 # 🏃‍♂️ Marathon Management System
-🌐 Live Site: [Visit Live Site](https://marathon-management-91e2f.web.app/)
+🌐 Live Site: [Marathon Management System](https://marathon-management-91e2f.web.app/)
 
 📌 Overview
 The Marathon Management System is a web-based platform that enables users to register for marathon campaigns, manage data, and interact with an intuitive and dynamic interface. With robust authentication, real-time updates, and a sleek design, this system simplifies marathon event management.
@@ -30,7 +30,9 @@ The Marathon Management System is a web-based platform that enables users to reg
 
 ## 🛠️ Technology Used
 - **Frontend: React, Vite, TailwindCSS, DaisyUI
+- **Backend:** Node.js, Express.js  
 - **Authentication: Firebase
+- **Database:** MongoDB  
 - **State Management: React Router
 - **UI Components: React Icons, Swiper, React-Datepicker
 - **Animations: React Awesome Reveal, React Lottie Player
@@ -68,12 +70,28 @@ cd marathon-management-system
 ```
 2️⃣ Install Dependencies
 ```sh
-
 npm install
 ```
-3️⃣ Start Development Server
-```sh
-npm run dev
-```
-The project should now be running on http://localhost:5173/ (or the port specified by Vite).
+3️⃣ Setup Environment Variables
+Create a .env file and add the required Firebase and MongoDB credentials:
 
+```sh
+MONGO_URI=your_mongodb_connection_string
+FIREBASE_API_KEY=your_firebase_api_key
+```
+4️⃣ Start the Backend Server
+```sh
+
+npm start
+```
+5️⃣ Run the Frontend
+Navigate to the frontend directory and start the React app:
+
+```sh
+cd frontend
+npm install
+npm start
+```
+🌍 Live Project Links
+Live Website: [Marathon Management System](https://marathon-management-91e2f.web.app/)
+Backend API: [assignment-12-server-azure.vercel.app](https://assignment-11-server-gray-six.vercel.app/)
