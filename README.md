@@ -17,13 +17,13 @@ The Marathon Management System is a web-based platform that enables users to reg
 
 ---
 ## 🚀 Features
-✅ **User Authentication – Secure login and registration
-✅ **CRUD Operations – Add, update, and delete marathon data
-✅ **Marathon Registration – Seamless event sign-up process
-✅ **Search & Sorting – Find events quickly with filters
-✅ **Dynamic Animations – Engaging UI with Animation
-✅ **Responsive Design – Works on all devices
-✅ **Real-Time Notifications – Toast alerts for user actions
+✅ **User Authentication – Secure login and registration**
+✅ **CRUD Operations – Add, update, and delete marathon data**
+✅ **Marathon Registration – Seamless event sign-up process**
+✅ **Search & Sorting – Find events quickly with filters**
+✅ **Dynamic Animations – Engaging UI with Animation**
+✅ **Responsive Design – Works on all devices**
+✅ **Real-Time Notifications – Toast alerts for user actions**
 ---
 
 ## 🛠️ Technology Used
