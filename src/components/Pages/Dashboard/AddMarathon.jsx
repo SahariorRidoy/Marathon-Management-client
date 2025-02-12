@@ -190,7 +190,7 @@ const AddMarathon = () => {
 
         {/* Submit Button */}
         <div className="form-control">
-          <button className="btn btn-success text-white w-full">Add Marathon</button>
+          <button className="btn btn-accent text-white w-full">Add Marathon</button>
         </div>
       </form>
     </div>

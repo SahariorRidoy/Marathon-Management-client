@@ -93,7 +93,7 @@ const MyApplyListData = ({ idx, apply, setMyApply }) => {
         <td>
           <button
             onClick={() => setOpenModal(true)}
-            className="btn btn-info btn-sm text-white mr-4"
+            className="btn btn-accent btn-sm text-white mr-4"
           >
             Update
           </button>

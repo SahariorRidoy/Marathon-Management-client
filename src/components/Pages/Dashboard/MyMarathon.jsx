@@ -35,15 +35,15 @@ const MyMarathon = () => {
         <table className="table">
           <thead>
             <tr>
-              <th className="text-base text-info">Serial</th>
-              <th className="text-base text-info hidden sm:table-cell">
+              <th className="text-base text-accent">Serial</th>
+              <th className="text-base text-accent hidden sm:table-cell">
                 Image
               </th>
-              <th className="text-base text-info">Title</th>
-              <th className="text-base text-info hidden sm:table-cell">
+              <th className="text-base text-accent">Title</th>
+              <th className="text-base text-accent hidden sm:table-cell">
                 Registration Start
               </th>
-              <th className="text-base text-info hidden sm:table-cell">
+              <th className="text-base text-accent hidden sm:table-cell">
                 registration End
               </th>
             </tr>

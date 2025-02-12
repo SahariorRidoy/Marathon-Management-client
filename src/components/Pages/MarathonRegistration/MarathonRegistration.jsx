@@ -54,7 +54,8 @@ const MarathonRegistration = () => {
   };
 
   return (
-    <div className="max-w-6xl mx-auto p-6 bg-gray-300 shadow-md rounded-lg">
+   <div className="bg-gray-200 p-6 pb-20">
+     <div className="max-w-[1320px] bg-gray-300 mx-auto p-6 border-2 rounded-lg">
       <Helmet>
         <title>Marathon | Marathon Registration</title>
       </Helmet>
@@ -71,7 +72,7 @@ const MarathonRegistration = () => {
               name="email"
               value={email}
               className="input input-bordered w-full"
-              disabled
+              readOnly
             />
           </div>
           <div className="form-control">
@@ -83,7 +84,7 @@ const MarathonRegistration = () => {
               name="title"
               value={marathon?.title || ''}
               className="input input-bordered w-full"
-              disabled
+              readOnly
             />
           </div>
         </div>
@@ -145,7 +146,7 @@ const MarathonRegistration = () => {
 
         <div className="flex justify-center mt-8">
           <button
-            className="btn btn-success px-8 text-white"
+            className="btn btn-accent px-8 text-white"
           >
             Register
           </button>
@@ -154,6 +155,7 @@ const MarathonRegistration = () => {
         </form>
       </div>
     </div>
+   </div>
   );
 };
 

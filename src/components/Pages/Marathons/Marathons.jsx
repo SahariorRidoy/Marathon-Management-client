@@ -27,7 +27,8 @@ const Marathons = () => {
   };
 
   return (
-    <div className="max-w-[1320px] mx-auto">
+    <div className="bg-gray-200 pb-6" > 
+      <div className=" max-w-[1320px] mx-auto">
       <Helmet>
         <title>Marathon | All Marathons</title>
       </Helmet>
@@ -36,7 +37,10 @@ const Marathons = () => {
       </h1>
 
       {/* Sorting Dropdown */}
-      <div className="flex justify-center my-6">
+      <div className="flex justify-center items-center my-6">
+        <label htmlFor="sort" className="mr-2 text-lg text-success font-semibold">
+          Sort by:
+        </label>
         <select
           className="select select-bordered w-48"
           value={sortOrder}
@@ -52,6 +56,7 @@ const Marathons = () => {
           <MarathonCard key={marathon?._id} marathon={marathon}></MarathonCard>
         ))}
       </div>
+    </div>
     </div>
   );
 };

@@ -36,7 +36,7 @@ const MyApplyList = () => {
       <h2 className="text-3xl font-bold text-center mb-6">My Apply List</h2>
       {/* Search Input */}
       <div className="flex items-center justify-center ">
-        <h2 className="bg-success py-3 px-6 rounded-l-xl font-semibold text-white">
+        <h2 className="bg-accent py-3 px-6 rounded-l-xl font-semibold text-white">
           Search
         </h2>
         <input
@@ -52,15 +52,15 @@ const MyApplyList = () => {
         <table className="table">
           <thead>
             <tr>
-              <th className="text-base text-info">Serial</th>
-              <th className="text-base text-info ">Title</th>
-              <th className="text-base text-info hidden md:table-cell sm:table-cell">
+              <th className="text-base text-accent">Serial</th>
+              <th className="text-base text-accent ">Title</th>
+              <th className="text-base text-accent hidden md:table-cell sm:table-cell">
                 Marathon Start
               </th>
-              <th className="text-base text-info hidden md:table-cell sm:table-cell">
+              <th className="text-base text-accent hidden md:table-cell sm:table-cell">
                 Full Name
               </th>
-              <th className="text-base text-info hidden md:table-cell sm:table-cell">
+              <th className="text-base text-accent hidden md:table-cell sm:table-cell">
                 Phone No.
               </th>
             </tr>

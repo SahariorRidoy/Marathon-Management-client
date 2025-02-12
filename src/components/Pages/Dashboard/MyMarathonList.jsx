@@ -4,7 +4,6 @@ import Swal from "sweetalert2";
 import axios from "axios";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { AuthContext } from "../../../Provider/AuthProvider";
 
 const MyMarathonList = ({ marathon, idx, setMarathons }) => {
   const { _id } = marathon;
@@ -115,7 +114,7 @@ const MyMarathonList = ({ marathon, idx, setMarathons }) => {
             <div className="flex gap-3 ml-[-35px]">
               <button
                 onClick={() => setOpenModal(true)}
-                className="btn btn-info text-white"
+                className="btn btn-accent text-white"
               >
                 Update
               </button>
@@ -248,7 +247,7 @@ const MyMarathonList = ({ marathon, idx, setMarathons }) => {
 
                       {/* Submit Button */}
                       <div className="form-control">
-                        <button className="btn btn-primary w-full">Update Marathon</button>
+                        <button className="btn btn-accent text-white w-full">Update Marathon</button>
                       </div>
                     </form>
 
