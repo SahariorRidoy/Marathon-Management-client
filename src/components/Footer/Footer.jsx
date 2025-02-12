@@ -2,12 +2,14 @@ import React from "react";
 import logo from "../../assets/logo.png";
 const Footer = () => {
   return (
-    <footer className=" footer mt-10 bg-base-200 text-base-content p-10 place-items-center">
-      <aside>
+   <section className=" bg-gray-800">
+     <footer className="footer max-w-[1320px] gap-12 md:gap-16 lg:gap-32 mx-auto text-white px-12 lg:px-6 py-10 place-items-center">
+      <aside className="-ml-9">
+        <div className="flex items-center">
         <img src={logo} alt="" />
+        <h2 className="text-3xl">Marathon Management</h2>
+        </div>
         <p>
-          Marathon Management
-          <br />
           Providing Marathon Campaign Management Program since 2024
         </p>
       </aside>
@@ -32,6 +34,7 @@ const Footer = () => {
         <a className="link link-hover">Cookie policy</a>
       </nav>
     </footer>
+   </section>
   );
 };
 

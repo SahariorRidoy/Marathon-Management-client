@@ -19,7 +19,7 @@ const MarathonSection = () => {
   console.log(data);
   return (
     <div className="max-w-[1320px] mx-auto">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
       {data.map((marathon) => (
           <MarathonCard key={marathon?._id} marathon={marathon}></MarathonCard>
         ))}

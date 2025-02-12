@@ -21,8 +21,10 @@ const Home = () => {
       <UpcomingMarathon></UpcomingMarathon>
       <h1 className="text-center mt-12 mb-6 text-3xl font-semibold"> Marathon Tips</h1>
       <MarathonTips></MarathonTips>
-      <h1 className="text-center mt-12 mb-6  text-3xl font-semibold"> Frequently Asked Question</h1>
+      <h1 className="text-center mt-12 pb-6  text-3xl font-semibold"> Frequently Asked Question</h1>
+     <div className="pb-12">
      <FAQSection></FAQSection>
+     </div>
     </div>
   );
 };

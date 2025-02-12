@@ -7,7 +7,7 @@ const Navbar = () => {
 
   useEffect(() => {}, [user]);
   return (
-    <div className="bg-gray-900 opacity-95 sticky top-0 z-50">
+    <div className="bg-gray-800 opacity-95 sticky top-0 z-50">
       <div className="navbar flex justify-between max-w-[1320px] mx-auto  ">
         <div className="navbar-start">
           <div className="dropdown">
@@ -49,7 +49,7 @@ const Navbar = () => {
             to="/"
             className="btn px-0 btn-ghost text-white text-lg lg:text-2xl"
           >
-            Marathon
+            Marathon Management
           </Link>
         </div>
         <div className="navbar-end hidden lg:flex items-center">
