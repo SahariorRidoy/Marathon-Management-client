@@ -37,7 +37,7 @@ const FaqSection = () => {
   };
 
   return (
-    <section className="max-w-[1320px] mx-auto pt-12 bg-gray-100">
+    <section id="faq" className="max-w-[1320px] mx-auto pt-12 bg-gray-100">
       <div className="space-y-4">
         {faqs.map((faq, index) => (
           <div key={index} className="bg-white shadow-lg rounded-lg">
