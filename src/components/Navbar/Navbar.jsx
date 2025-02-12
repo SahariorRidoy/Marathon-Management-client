@@ -7,7 +7,7 @@ const Navbar = () => {
 
   useEffect(() => {}, [user]);
   return (
-    <div className="bg-[#333333] opacity-95 sticky top-0 z-50">
+    <div className="bg-gray-900 opacity-95 sticky top-0 z-50">
       <div className="navbar flex justify-between max-w-[1320px] mx-auto  ">
         <div className="navbar-start">
           <div className="dropdown">
@@ -58,7 +58,7 @@ const Navbar = () => {
               to="/"
               className={({ isActive }) =>
                 `px-4 py-2 rounded-md text-white transition ${
-                  isActive ? "bg-blue-500" : "hover:bg-blue-400"
+                  isActive ? "bg-accent" : "hover:bg-accent"
                 }`
               }
             >
@@ -69,7 +69,7 @@ const Navbar = () => {
               to="/marathons"
               className={({ isActive }) =>
                 `px-4 py-2 rounded-md text-white transition ${
-                  isActive ? "bg-blue-500" : "hover:bg-blue-400"
+                  isActive ? "bg-accent" : "hover:bg-accent"
                 }`
               }
             >
@@ -85,7 +85,7 @@ const Navbar = () => {
                   faqSection.scrollIntoView({ behavior: "smooth" });
                 }
               }}
-              className="px-4 py-2 rounded-md text-white cursor-pointer hover:bg-blue-400 transition"
+              className="px-4 py-2 rounded-md text-white cursor-pointer hover:bg-accent transition"
             >
               FAQ
             </a>
@@ -99,7 +99,7 @@ const Navbar = () => {
                 to="/dashboard"
                 className={({ isActive }) =>
                   `px-4 py-2 rounded-md text-white transition ${
-                    isActive ? "bg-blue-500" : "hover:bg-blue-400"
+                    isActive ? "bg-accent" : "hover:bg-accent"
                   }`
                 }
               >

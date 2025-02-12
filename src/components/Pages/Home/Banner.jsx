@@ -38,7 +38,7 @@ const Banner = () => {
             <p className="mt-4 text-sm lg:text-lg">
               Be part of a platform that empowers dreams and supports meaningful causes.
             </p>
-            <Link to="/register" className="btn btn-accent mt-6">
+            <Link to="/register" className="btn btn-accent text-white mt-6">
               Get Started
             </Link>
           </div>
@@ -61,7 +61,7 @@ const Banner = () => {
             <p className="mt-4 text-sm lg:text-lg">
               Explore impactful campaigns and make a difference with your contributions.
             </p>
-            <Link to="/marathons" className="btn btn-accent mt-6">
+            <Link to="/marathons" className="btn btn-accent text-white mt-6">
               Browse Marathon Events
             </Link>
           </div>
@@ -84,7 +84,7 @@ const Banner = () => {
             <p className="mt-4 text-sm lg:text-lg">
               Raise funds for your cause or project and reach a global audience.
             </p>
-            <Link to="/dashboard" className="btn btn-accent mt-6">
+            <Link to="/dashboard" className="btn btn-accent text-white mt-6">
               Add Marathon Now
             </Link>
           </div>
