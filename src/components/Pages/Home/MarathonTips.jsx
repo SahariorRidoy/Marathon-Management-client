@@ -2,47 +2,27 @@ import React from 'react';
 
 const MarathonTips = () => {
     return (
-        <section className="max-w-[1320px] mx-auto bg-gray-100">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div className="card bg-white shadow-lg p-6 rounded-lg">
-          <h3 className="text-2xl font-semibold mb-4">Start Training Early</h3>
-          <p className="text-lg text-gray-700">
-            Begin your marathon training well in advance to build endurance and reduce the risk of injury. Gradually increase your distance each week, and don’t forget to rest!
-          </p>
-        </div>
-        <div className="card bg-white shadow-lg p-6 rounded-lg">
-          <h3 className="text-2xl font-semibold mb-4">Stay Hydrated</h3>
-          <p className="text-lg text-gray-700">
-            Proper hydration is key to maintaining energy levels throughout the marathon. Drink plenty of water and electrolyte drinks to stay energized.
-          </p>
-        </div>
-        <div className="card bg-white shadow-lg p-6 rounded-lg">
-          <h3 className="text-2xl font-semibold mb-4">Nutrition is Key</h3>
-          <p className="text-lg text-gray-700">
-            Fuel your body with proper nutrition before and during the race. Include carbs, protein, and healthy fats in your meals. Make sure to eat a balanced breakfast before the race.
-          </p>
-        </div>
-        <div className="card bg-white shadow-lg p-6 rounded-lg">
-          <h3 className="text-2xl font-semibold mb-4">Practice Mental Toughness</h3>
-          <p className="text-lg text-gray-700">
-            Marathons are just as much a mental challenge as a physical one. Develop strategies to stay positive and push through tough moments. Visualizing success can be a powerful tool.
-          </p>
-        </div>
-        <div className="card bg-white shadow-lg p-6 rounded-lg">
-          <h3 className="text-2xl font-semibold mb-4">Pacing is Crucial</h3>
-          <p className="text-lg text-gray-700">
-            It’s easy to get carried away in the excitement of the race. Find a comfortable pace early on to avoid burnout. Listen to your body and adjust your pace accordingly.
-          </p>
-        </div>
-        <div className="card bg-white shadow-lg p-6 rounded-lg">
-          <h3 className="text-2xl font-semibold mb-4">Rest and Recover</h3>
-          <p className="text-lg text-gray-700">
-            After the marathon, give your body the time it needs to recover. Stretch, hydrate, and consider light jogging or swimming to keep your muscles active and prevent stiffness.
-          </p>
-        </div>
-      </div>
-    </section>
+        <section className="max-w-[1320px] mx-auto px-6 py-12 ">
+          
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {tips.map((tip, index) => (
+                    <div key={index} className="bg-white shadow-lg rounded-lg p-6 transition-transform transform hover:scale-105 duration-300">
+                        <h3 className="text-xl font-semibold text-gray-800 mb-3">{tip.title}</h3>
+                        <p className="text-gray-700 text-sm leading-relaxed">{tip.description}</p>
+                    </div>
+                ))}
+            </div>
+        </section>
     );
 };
+
+const tips = [
+    { title: "Start Training Early", description: "Begin your training well in advance to build endurance and prevent injuries. Gradually increase distance each week and allow for proper rest." },
+    { title: "Stay Hydrated", description: "Proper hydration is key. Drink water and electrolyte-rich fluids before, during, and after the marathon to maintain energy levels." },
+    { title: "Nutrition is Key", description: "Fuel your body with a balanced diet including carbs, protein, and healthy fats. Eat a proper breakfast before the race." },
+    { title: "Practice Mental Toughness", description: "Marathons are as much a mental challenge as a physical one. Develop strategies to stay positive and visualize success." },
+    { title: "Pacing is Crucial", description: "Start at a comfortable pace to avoid early burnout. Listen to your body and adjust accordingly throughout the race." },
+    { title: "Rest and Recover", description: "Post-marathon recovery is essential. Stretch, hydrate, and consider light activity like jogging or swimming to prevent stiffness." }
+];
 
 export default MarathonTips;

@@ -7,7 +7,7 @@ import {Helmet} from "react-helmet";
 
 const Home = () => {
   return (
-    <div className="bg-gray-200">
+    <div className="bg-gray-300">
       <Helmet>
         <title>Marathon | Home</title>
       </Helmet>

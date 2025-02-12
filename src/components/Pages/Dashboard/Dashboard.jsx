@@ -4,7 +4,8 @@ import { NavLink, Outlet } from "react-router-dom";
 
 const Dashboard = () => {
   return (
-    <div className="max-w-[1320px] mx-auto grid grid-cols-1 md:grid-cols-6 gap-6 p-4 md:p-6">
+    <div className="bg-gray-200">
+      <div className="max-w-[1320px] mx-auto grid grid-cols-1 md:grid-cols-6 gap-6 p-4 md:p-6">
       <Helmet>
         <title>Dashboard | Add Marathon</title>
       </Helmet>
@@ -54,6 +55,7 @@ const Dashboard = () => {
       <div className="col-span-1 md:col-span-4 lg:col-span-5 bg-gray-50 shadow-xl rounded-xl p-4">
         <Outlet />
       </div>
+    </div>
     </div>
   );
 };
