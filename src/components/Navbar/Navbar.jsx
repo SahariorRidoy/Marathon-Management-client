@@ -64,18 +64,6 @@ const Navbar = () => {
             >
               Home
             </NavLink>
-
-            <NavLink
-              to="/marathons"
-              className={({ isActive }) =>
-                `px-4 py-2 rounded-md text-white transition ${
-                  isActive ? "bg-accent" : "hover:bg-accent"
-                }`
-              }
-            >
-              Marathons
-            </NavLink>
-
             <a
               href="#faq"
               onClick={(e) => {
@@ -89,6 +77,19 @@ const Navbar = () => {
             >
               FAQ
             </a>
+
+            <NavLink
+              to="/marathons"
+              className={({ isActive }) =>
+                `px-4 py-2 rounded-md text-white transition ${
+                  isActive ? "bg-accent" : "hover:bg-accent"
+                }`
+              }
+            >
+              Marathons
+            </NavLink>
+
+          
           </ul>
 
           {/* If User Exist */}
