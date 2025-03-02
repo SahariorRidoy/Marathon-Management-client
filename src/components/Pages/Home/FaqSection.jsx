@@ -37,7 +37,9 @@ const FaqSection = () => {
   };
 
   return (
-    <section id="faq" className="max-w-[1320px] mx-auto pt-12 bg-gray-100">
+    <section className="bg-gray-200 px-64 pb-6">
+      <div id="faq" className="max-w-[1320px] mx-auto px-5 py-10  rounded-xl ">
+      <h1 className="text-center my-12 pb-6  text-3xl font-semibold"> Frequently Asked Question</h1>
       <div className="space-y-4">
         {faqs.map((faq, index) => (
           <div key={index} className="bg-white shadow-lg rounded-lg">
@@ -82,6 +84,7 @@ const FaqSection = () => {
           </div>
         ))}
       </div>
+    </div>
     </section>
   );
 };

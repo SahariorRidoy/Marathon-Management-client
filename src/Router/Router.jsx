@@ -12,6 +12,8 @@ import MyApplyList from "../components/Pages/Dashboard/MyApplyList";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import MarathonDetails from "../components/MarathonDetails/MarathonDetails";
 import MarathonRegistration from "../components/Pages/MarathonRegistration/MarathonRegistration";
+import ContactUs from "../components/Pages/Contact Us/ContactUs";
+import FaqSection from "../components/Pages/Home/FAQSection";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +23,14 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+      },
+      {
+        path: "/contact",
+        element: <ContactUs></ContactUs>,
+      },
+      {
+        path: "/faq",
+        element: <FaqSection></FaqSection>,
       },
       {
         path: "/marathons",

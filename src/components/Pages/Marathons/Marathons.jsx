@@ -1,30 +1,38 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import MarathonCard from "./MarathonCard";
 import { Helmet } from "react-helmet";
+import Loading from "../../Loading/Loading";
+import { AuthContext } from "../../../Provider/AuthProvider";
 
 const Marathons = () => {
   const [data, setData] = useState([]);
-  const [sortOrder, setSortOrder] = useState("desc"); // Default sort order
+  const { user } = useContext(AuthContext);
+    const [loading, setLoading] = useState(true);
+  const [sortOrder, setSortOrder] = useState("desc"); 
 
   const fetchMarathons = () => {
     axios
       .get(`https://assignment-11-server-gray-six.vercel.app/marathons?sortOrder=${sortOrder}`)
       .then((res) => {
         setData(res.data);
+        setLoading(false);
       })
       .catch((err) => {
         console.error(err);
       });
   };
-
+  
   useEffect(() => {
     fetchMarathons();
-  }, [sortOrder]); // Refetch data when sortOrder changes
+  }, [sortOrder,user?.email]); // Refetch data when sortOrder changes
 
   const handleSortChange = (e) => {
     setSortOrder(e.target.value);
   };
+  if (loading) {
+    return <Loading></Loading>;
+  }
 
   return (
     <div className="bg-gray-200 pb-6" > 

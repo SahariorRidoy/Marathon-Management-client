@@ -109,7 +109,7 @@ const MyApplyListData = ({ idx, apply, setMyApply }) => {
       {openModal && (
         <dialog className="modal bg-gray-300" open>
           <div className="modal-box">
-            <h3 className="font-bold text-lg">Update Application</h3>
+            <h3 className="font-bold text-accent text-2xl mb-4">Update Application</h3>
             <form onSubmit={handleSubmit}>
               <div className="form-control">
                 <label className="label">First Name</label>
@@ -147,8 +147,8 @@ const MyApplyListData = ({ idx, apply, setMyApply }) => {
                   required
                 />
               </div>
-              <div className="form-control mt-4">
-                <button type="submit" className="btn btn-primary ">
+              <div className="form-control  mt-4">
+                <button type="submit" className="btn btn-accent text-white">
                   Update
                 </button>
                 <button

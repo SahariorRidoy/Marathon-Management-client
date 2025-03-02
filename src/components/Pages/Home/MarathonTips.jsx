@@ -2,7 +2,7 @@ import React from 'react';
 
 const MarathonTips = () => {
     return (
-        <section className="max-w-[1320px] mx-auto px-6 py-12 ">
+        <section className="max-w-[1320px] mx-auto px-6 pt-12 ">
           
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {tips.map((tip, index) => (

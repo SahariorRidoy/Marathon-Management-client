@@ -26,7 +26,7 @@ const MyMarathon = () => {
     return <Loading></Loading>;
   }
   return (
-    <div className="max-w-[1320px] mx-auto bg-gray-200">
+    <div className="max-w-[1320px] mx-auto ">
       <Helmet>
         <title>Dashboard | My Marathon List</title>
       </Helmet>

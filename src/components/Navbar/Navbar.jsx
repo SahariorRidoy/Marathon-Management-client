@@ -8,7 +8,7 @@ const Navbar = () => {
   useEffect(() => {}, [user]);
   return (
     <div className="bg-gray-800 opacity-95 sticky top-0 z-50">
-      <div className="navbar flex justify-between max-w-[1320px] mx-auto  ">
+      <div className="navbar flex justify-between items-center max-w-[1320px] mx-auto  ">
         <div className="navbar-start">
           <div className="dropdown">
             <div
@@ -52,42 +52,50 @@ const Navbar = () => {
             Marathon Management
           </Link>
         </div>
-        <div className="navbar-end hidden lg:flex items-center">
-          <ul className="menu menu-horizontal px-1 space-x-5 text-lg font-semibold">
+        <div className="navbar-center hidden lg:flex items-center">
+          <ul className="menu menu-horizontal space-x-5 text-base font-semibold">
             <NavLink
               to="/"
               className={({ isActive }) =>
-                `px-4 py-2 rounded-md text-white transition ${
+                `px-2 py-2 rounded-md text-white transition ${
                   isActive ? "bg-accent" : "hover:bg-accent"
                 }`
               }
             >
               Home
             </NavLink>
-            <a
-              href="#faq"
-              onClick={(e) => {
-                e.preventDefault();
-                const faqSection = document.getElementById("faq");
-                if (faqSection) {
-                  faqSection.scrollIntoView({ behavior: "smooth" });
-                }
-              }}
-              className="px-4 py-2 rounded-md text-white cursor-pointer hover:bg-accent transition"
-            >
-              FAQ
-            </a>
-
+           
             <NavLink
               to="/marathons"
               className={({ isActive }) =>
-                `px-4 py-2 rounded-md text-white transition ${
+                `px-2 py-2 rounded-md text-white transition ${
                   isActive ? "bg-accent" : "hover:bg-accent"
                 }`
               }
             >
               Marathons
             </NavLink>
+            <NavLink
+              to="/faq"
+              className={({ isActive }) =>
+                `px-2 py-2 rounded-md text-white transition ${
+                  isActive ? "bg-accent" : "hover:bg-accent"
+                }`
+              }
+            >
+              FAQ
+            </NavLink>
+            <NavLink
+              to="/contact"
+              className={({ isActive }) =>
+                `px-2 py-2 rounded-md text-white transition ${
+                  isActive ? "bg-accent" : "hover:bg-accent"
+                }`
+              }
+            >
+              Contact
+            </NavLink>
+            
 
           
           </ul>
@@ -95,11 +103,12 @@ const Navbar = () => {
           {/* If User Exist */}
 
           {user?.photoURL ? (
-            <div className="flex gap-6 text-lg font-semibold">
+            <div className="flex gap-2 text-base font-semibold">
+              
               <NavLink
                 to="/dashboard"
                 className={({ isActive }) =>
-                  `px-4 py-2 rounded-md text-white transition ${
+                  `px-2 py-2 mt-1 rounded-md text-white transition ${
                     isActive ? "bg-accent" : "hover:bg-accent"
                   }`
                 }
